@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddSessionActivity"
+    android:id="@+id/rlAddSession">
+
+    <LinearLayout
+        android:id="@+id/llSessionType"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="40dp"
+        android:layout_marginStart="15dp"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/tvSessionType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Session Type:"/>
+
+        <Spinner
+            android:id="@+id/spnSessionTypes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:entries="@array/session_types"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llTime"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/llSessionType"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="15dp"
+        android:gravity="center_vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Time"
+            android:layout_below="@id/llSessionType"/>
+
+        <TimePicker
+            android:id="@+id/tpTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:timePickerMode="spinner"
+            android:format24Hour="HH:mm"/>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llDuration"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/llTime"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="15dp"
+        android:gravity="center_vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Duration"
+            android:layout_below="@id/llSound"/>
+
+        <EditText
+            android:id="@+id/edtDuration"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:inputType="number"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Minutes"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/red"
+            android:id="@+id/tvError"
+            android:text="Please ensure your\ninputs are valid"
+            android:visibility="gone"
+            android:layout_marginLeft="50dp"/>
+
+
+    </LinearLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Submit"
+        android:id="@+id/btnSubmit"
+        android:layout_below="@id/llDuration"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"/>
+
+    <include layout="@layout/footer"/>
+
+</RelativeLayout>

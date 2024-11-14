@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Meditation App user Guide</title>
+    <meta charset = "UTF-8">
+    <meta name = "viewport" content = "width=device-width", initial-scale="1.0">
+</head>
+<style>
+    @media screen and (orientation: landscape) {
+        img {
+                width: 50%;
+             }
+    }
+
+    @media screen and (orientation: portrait) {
+        img {
+                width: 100%;
+            }
+    }
+</style>
+<script>
+    function goBack() {
+        window.androidInterface.goBack();
+    }
+</script>
+<body>
+<h1>Tommy's Meditation App</h1>
+Welcome to my meditation app, where you can improve the state of your mind by practising meditations sessions such as mindfulness
+or breathing exercises daily!
+<br>This user guide will take you through the ins and outs of my app, and how to use it to create a productive meditation lifestyle.
+<h2>Homepage</h2>
+<img src = "screenshots/main_menu.png">
+<p>This is the apps starting page, where it shows your
+meditation streak, along with the access to view your
+calendar, or start a session immediately<br>
+</p>
+<h3>Meditation Streak</h3>
+<p>Your meditation streak increments up to once per day, if you do a meditation session on that day, and
+resets either if you miss a meditation session, or fail to meditate for over a week.</p>
+<h4>Send your meditation streak</h4>
+<p>Want to show off your meditation streak to one of your friends? You can do so by clicking the share button on the top right corner of the screen
+<br>For instance, if I click on the "text" icon, I can send a message to my friend regarding my meditation streak!</p>
+<img src="screenshots/messages.png"/>
+<h2>View Calendar</h2>
+<img src = "screenshots/view_calendar.png" alt = "Calendar">
+<p>Clicking on "View Calendar" will launch you to an new page with a Calendar UI,
+allowing you to view the history of your meditation sessions, or book a session in advance</p>
+<p>You can also click on the "Calendar" icon at the bottom, which will open your personal phone calendar app, if you prefer to store your
+upcomming meditation sessions there (more on this later)</p>
+<h3>View Meditation History</h3>
+<img src = "screenshots/view_meditation_sessions.png" alt = "History">
+<p>Here shows a list of meditation sessions that the user has partaked in previously
+<br>"Green" indicates that the session was complete
+<br>"Red" indicates that the session was incomplete</p>
+<h3>Book an advance Session</h3>
+<img src = "screenshots/view_meditation_sessions_2.png" alt = "Meditation Session list">
+<p>Clicking on a future, or current day will allow you to book a meditation session
+in advance
+<br>Clicking on "Add a Session" will open a form for the user to fill in for details about the
+meditation session; that being the session type (Mindfulness or Breathing Exercise), the due date, and the duration
+of the session</p>
+<img src="screenshots/add_meditation_session.png">
+<p>Clicking the "Submit" button will take you back to the previous page, and alert you with a message at the bottom, illustrating
+that the session add was successful</p>
+<img src="screenshots/view_meditation_sessions_2_add.png">
+<p>Clicking on the "Add to calendar" button will open the users calendar app, with the details of the session
+already inputted, so the user can add their meditation session to their calendar app if they please</p>
+<img src="screenshots/calendar_add_session.png">
+<img src="screenshots/calendar_events.png">
+<p>And as you can see, the meditation session was successfully added to the calendar app!</p>
+<h4>Session expires</h4>
+<p>Remember: If you don't complete a session within 10 minutes after its due date, it will be labelled as "incomplete" and will reset your streak.
+<br>You can refresh the status of your meditation session by swiping up on the app</p>
+<img src ="screenshots/before_refresh.png">
+<p>This is before the session has expired</p>
+<img src = "screenshots/after_refresh.png"/>
+<p>And this is after</p>
+<h3>Start a previously booked session</h3>
+<p>Now that it is in the time range of starting our booked meditation session from earlier, we will get a notification, reminding us of our previously booked
+session</p>
+<img src = "screenshots/reminder.png">
+<img src = "screenshots/notification_onclick.png" alt = "Meditation Session list">
+<p>Clicking on this notification will launch us to the day of the session, where we can begin.
+<br>So, I can click on the above blue session, which already has a duration value from the time it was booked,
+so just input the sound you want in the background</p>
+<img src = "screenshots/awaiting_session_form.png" alt = "Starting a booked session">
+<p>Or the breathe-in/out times (depending on the session type) and you're good to go!</p>
+<img src="screenshots/mindfulness_session.png" alt = "Starting a mindfulness Session">
+<img src="screenshots/view_meditation_sessions_2_updated.png" alt = "Updated Session list">
+<p>And once you've fully completed the session, it will be labelled as "complete" in the database!</p>
+<h2>Start an immediate Session</h2>
+<p>You can also start a session immediately instead</p>
+<img src = "screenshots/view_session_type.png" alt = "Session Type">
+<p>Simply choose the session type that you want</p>
+<br>This time we'll choose "Breathing Exercise"</p>
+<img src="screenshots/breathing_exercise_form.png" alt = "Breathing Exercise form">
+<p>And any required parameters (depending on what session you chose)</p>
+<img src="screenshots/breathing_exercise_session.png" alt = "Breathing Exercise UI">
+<p>For breathing exercises, the UI will illustrate when and how long you need to breathe in/out
+for with the very intuitive self inflating/deflating circle in the centre!</p>
+<p>Once you have fully completed the session, you can view it in your calendar as a complete session as before.</p>
+<img src="screenshots/view_meditation_sessions_2_updated_2.png" width="100%"/>
+<h2>Delete a session</h2>
+<img src = "screenshots/session_to_delete.png">
+<p>Don't feel like doing a session you booked session anymore? You can delete it before its passed the dealine by simplying clicking the "Remove session" button
+and clicking the session you wish to delete</p>
+<img src = "screenshots/session_to_delete_confirm.png">
+<img src = "screenshots/session_to_delete_confirm_after.png">
+</body>
+</html>

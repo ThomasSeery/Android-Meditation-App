@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.READ_CALENDAR"/>
+    <uses-permission android:name="android.permission.WRITE_CALENDAR"/>
+    <uses-permission android:name="com.google.android.gm.permission.READ_GMAIL"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:targetApi="31">
+        <service android:name=".UpdateService" />
+        <activity
+            android:name=".WebViewActivity"
+            android:exported="false"
+            android:parentActivityName=".FooterActivity"/>
+
+        <provider
+            android:name=".MeditationContentProvider"
+            android:authorities="com.example.mymeditationapp.provider"
+            android:exported="false" />
+
+        <activity
+            android:name=".BreathingSessionActivity"
+            android:exported="false"
+            android:parentActivityName=".FooterActivity"/>
+        <activity
+            android:name=".AddSessionActivity"
+            android:exported="false"
+            android:parentActivityName=".FooterActivity" />
+        <activity
+            android:name=".ViewMeditationSessionsActivity"
+            android:exported="false"
+            android:parentActivityName=".FooterActivity" />
+        <activity
+            android:name=".MindfulnessSessionActivity"
+            android:exported="false"
+            android:parentActivityName=".FooterActivity" />
+        <activity
+            android:name=".BreathingFormActivity"
+            android:exported="false"
+            android:parentActivityName=".FooterActivity" />
+        <activity
+            android:name=".MindfulnessFormActivity"
+            android:exported="false"
+            android:parentActivityName=".FooterActivity" />
+        <activity
+            android:name=".SessionTypeActivity"
+            android:exported="false"
+            android:parentActivityName=".FooterActivity" />
+        <activity
+            android:name=".ViewCalendarActivity"
+            android:exported="false"
+            android:parentActivityName=".FooterActivity" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:parentActivityName=".FooterActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".FooterActivity"
+            android:exported="false" />
+
+        <receiver android:name=".AlarmReceiver" />
+    </application>
+
+</manifest>

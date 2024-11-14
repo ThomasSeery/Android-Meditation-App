@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">MyMeditationApp</string>
+    <string-array name="session_types">
+        <item value="mindfulness">Mindfulness</item>
+        <item value="breathing">Breathing Exercise</item>
+    </string-array>
+</resources>
